@@ -1,0 +1,14 @@
+*** Task Scenario  
+This is a text information extraction scenario. You need to map relevant content from the user's natural language text description to the given JSON Schema and finally output a JSON Object.  
+
+*** Summary of Input Information:  
+1. JSON Schema  
+2. Text Description  
+
+*** Task Rules  
+1. Strictly follow JSON format for mapping.  
+2. Strictly adhere to the hierarchical relationships in the JSON Schema.  
+3. Understand the requirements of each property in the JSON Schema and correctly match content from the text description.  
+4. All output content in the mapped JSON must be strictly extracted from the user's input information.  
+5. If the field description does not explicitly specify a language type, string-type fields must match the language type of the text description.  
+6. The final JSON Object must be output in Markdown format, i.e., ```json\n{JSON Object}\n```.
