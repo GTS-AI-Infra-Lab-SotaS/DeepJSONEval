@@ -31,10 +31,10 @@ for i in tqdm(range(len(benchmark_info['schema']))):
     first_half = utils.load_file(r'JSON_Output_meta_prompt.txt')
     second_half = f"*** JSON Schema\n{curent_schema}\n\n*** Text Description\n{current_text}"
     input_message = [{"role": "user", "content": first_half + '\n' + second_half}]
-    # try:
-    result = utils.post_request_by_openai_format(args.base_url, args.key, args.model_name, input_message)   ## openai style of calling LLM API
-    # except:
-    #     result = ["Need Retry"] * 3
+    try:
+        result = utils.post_request_by_openai_format(args.base_url, args.key, args.model_name, input_message)   ## openai style of calling LLM API
+    except:
+        result = ["Need Retry"] * 3
     to_save["model_output"].append(result[0])
     to_save["prompt_tokens"].append(result[1])
     to_save["completion_tokens"].append(result[2])
