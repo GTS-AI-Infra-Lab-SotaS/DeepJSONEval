@@ -14,7 +14,7 @@ def get_args():
 
 args = get_args()
 
-benchmark_file = './schemas_and_json_v7.2.xlsx'
+benchmark_file = './DeepJSON/DeepJSON_benchmark.xlsx'
 
 benchmark_info = utils.load_excel_data(benchmark_file, 'sheet1')
 
