@@ -31,7 +31,7 @@ The comprehensive evaluation framework reveals significant performance gaps in c
 Our multi-dimensional assessment approach enables precise identification of specific failure modes, from format compliance issues to semantic understanding deficiencies.
 
 
-The performance of 12 representative SOTA LLMs with leading capabilities on our **DeeJSON** benchmark is presented.
+The performance of 12 representative SOTA LLMs with leading capabilities on our **DeepJSON** benchmark is presented.
 
 ## Dataset Generation
 ### Tree Based Pseudo-Schema Candidates Generation
