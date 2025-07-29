@@ -1,6 +1,6 @@
-# DeepJSON: Benchmarking Complex Nested JSON Generation in Large Language Models
+# DeepJSONEval: Benchmarking Complex Nested JSON Generation in Large Language Models
 
-- [DeepJSON: Benchmarking Complex Nested JSON Generation in Large Language Models](#deepjson--benchmarking-complex-nested-json-generation-in-large-language-models)
+- [DeepJSONEval: Benchmarking Complex Nested JSON Generation in Large Language Models](#deepjsoneval--benchmarking-complex-nested-json-generation-in-large-language-models)
   * [Introduction](#introduction)
   * [Dataset Generation](#dataset-generation)
     + [Tree Based Pseudo-Schema Candidates Generation](#tree-based-pseudo-schema-candidates-generation)
@@ -32,7 +32,7 @@ The comprehensive evaluation framework reveals significant performance gaps in c
 Our multi-dimensional assessment approach enables precise identification of specific failure modes, from format compliance issues to semantic understanding deficiencies.
 
 
-The performance of 12 representative SOTA LLMs with leading capabilities on our **DeepJSON** benchmark is presented.
+The performance of 12 representative SOTA LLMs with leading capabilities on our **DeepJSONEval** benchmark is presented.
 
 ## Dataset Generation
 ### Tree Based Pseudo-Schema Candidates Generation
