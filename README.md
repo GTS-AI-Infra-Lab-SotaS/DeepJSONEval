@@ -1,6 +1,6 @@
-# DeepJSON: A Comprehensive Benchmark for Evaluating Structured JSON Extraction in Large Language Models
+# DeepJSON: Benchmarking Complex Nested JSON Generation in Large Language Models
 
-- [DeepJSON: A Comprehensive Benchmark for Evaluating Structured JSON Extraction in Large Language Models](#deepjson--a-comprehensive-benchmark-for-evaluating-structured-json-extraction-in-large-language-models)
+- [DeepJSON: Benchmarking Complex Nested JSON Generation in Large Language Models](#deepjson--benchmarking-complex-nested-json-generation-in-large-language-models)
   * [Introduction](#introduction)
   * [Dataset Generation](#dataset-generation)
     + [Tree Based Pseudo-Schema Candidates Generation](#tree-based-pseudo-schema-candidates-generation)
@@ -12,6 +12,7 @@
     + [Environment](#environment)
     + [Data](#data)
     + [Running Inference](#running-inference)
+    + [Continue Running Inference](#continue-running-inference)
     + [Running Evaluation](#running-evaluation)
   * [Cite](#cite)
  
