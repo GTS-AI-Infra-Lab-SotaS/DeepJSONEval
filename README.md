@@ -1,8 +1,20 @@
-# DeepJSON
+# DeepJSON: A Comprehensive Benchmark for Evaluating Structured JSON Extraction in Large Language Models
 
-- [DeepJSON](#deepjson)
+- [DeepJSON: A Comprehensive Benchmark for Evaluating Structured JSON Extraction in Large Language Models](#deepjson--a-comprehensive-benchmark-for-evaluating-structured-json-extraction-in-large-language-models)
   * [Introduction](#introduction)
-  * 
+  * [Dataset Generation](#dataset-generation)
+    + [Tree Based Pseudo-Schema Candidates Generation](#tree-based-pseudo-schema-candidates-generation)
+    + [Standard JSON Schema Generation](#standard-json-schema-generation)
+    + [JSON Object Generation](#json-object-generation)
+    + [Text Generation](#text-generation)
+  * [Evaluation Criteria](#evaluation-criteria)
+  * [Inference and Evaluation](#inference-and-evaluation)
+    + [Environment](#environment)
+    + [Data](#data)
+    + [Running Inference](#running-inference)
+    + [Running Evaluation](#running-evaluation)
+  * [Cite](#cite)
+ 
 ## Introduction
 We propose Deep-JSON, a pioneering deep-nested JSON evaluation benchmark and framework designed to comprehensively assess LLM capabilities in complex structured output generation.
 Our approach introduces several groundbreaking innovations: 
@@ -50,7 +62,7 @@ structural traversal
 * **Criterion 3: Strictly Score**  
 This criterion implements binary exact-match evaluation through strict equality verification between LLM output and ground truth JSON
 
-## Inference & Evaluation
+## Inference and Evaluation
 ### Environment
 Before using the benchmark for Model inference and evaluation, make sure all the package in the `requirements.txt` are installed. Or you can install the packages by
 
@@ -58,4 +70,34 @@ Before using the benchmark for Model inference and evaluation, make sure all the
 pip install -r requirements.txt
 ```
 ### Data
-download `DeepJSON_benchmark.xlsx`
+Download `DeepJSON_benchmark.xlsx` in this Github project or [HuggingFace](https://huggingface.co/datasets/GTSAIInfraLabSOTAS/DeepJSON)
+
+The benchmark dataset has 5 columns: `schema`, `text`, `json`, `category` and `true_depth`.
+* `schema`: the JSON schema for JSON output
+* `text`: the plain text in natrual language to be extract
+* `json`: the ground truth matching the `schema`
+* `category`: domain of the data peice
+* `true_depth`: the number of levels of nesting depth
+### Running Inference
+We use API in OpenRouter website to run the infernece: 
+```python
+python running_infenrence.py --base-url 'url' --key 'api-key' --model-name 'model_name' --saving-path 'whre to save the inference result'
+```
+* `--base-url`: base url of LLM chat api
+* `--key`: api key for using the LLM chat api
+* `--model-name`: name of model when post request to the LLM chat api
+* `--saving-path`: the path of folder in which the inference result file locates
+
+If do not use the API in OpenRouter website, users can create your own method of geetting inference result and change **line 35** in `running_infenrence.py`
+### Continue Running Inference 
+The online LLM API could be unstale as running out of credits or request congestion, some result in the inference result will be marked as **"Need Retry"**. Use `running_infenrence_continue.py` to post requests on those data pieces need retry.
+```python
+python running_infenrence_continue.py --base-url 'url' --key 'api-key' --model-name 'model_name' --saving-path 'whre to save the inference result'
+```
+### Running Evaluation
+```python
+python running_evaluation.py --load-path 'whre to save the inference result'  --saving-path 'where to save the evaluation result'
+```
+* `--load-path`: the path of folder in which the inference result file locates
+* `--saving-path`: the path of folder in which place the evaluation result file
+## Cite
