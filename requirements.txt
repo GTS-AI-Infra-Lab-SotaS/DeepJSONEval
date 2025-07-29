@@ -1,0 +1,6 @@
+openpyxl
+pandas
+openai
+tqdm
+argparse
+jsonschema
