@@ -17,7 +17,7 @@
   * [Cite](#cite)
  
 ## Introduction
-We propose Deep-JSON, a pioneering deep-nested JSON evaluation benchmark and framework designed to comprehensively assess LLM capabilities in complex structured output generation.
+We propose DeepJSONEval, a pioneering deep-nested JSON evaluation benchmark and framework designed to comprehensively assess LLM capabilities in complex structured output generation.
 Our approach introduces several groundbreaking innovations: 
 * We introduce an innovative DFS subtree search-based schema generation algorithm that effectively supports the construction of complex nested structures.
 * We implement comprehensive data type coverage, incorporating strings, numbers, boolean values, string enumerations, and lists to systematically evaluate LLM robustness across different data types. Third, we develop a novel multidimensional fine-grained evaluation framework encompassing format matching accuracy, field correctness, and complete structural correctness, providing multi-perspective and detailed assessment of JSON generation quality. 
@@ -71,7 +71,7 @@ Before using the benchmark for Model inference and evaluation, make sure all the
 pip install -r requirements.txt
 ```
 ### Data
-Download `DeepJSON_benchmark.xlsx` in this Github project or [HuggingFace](https://huggingface.co/datasets/GTSAIInfraLabSOTAS/DeepJSON)
+Download `DeepJSONEval.xlsx` in this Github project, you can also download the jsonl format dataset in [HuggingFace](https://huggingface.co/datasets/GTSAIInfraLabSOTAS/DeepJSON)
 
 The benchmark dataset has 5 columns: `schema`, `text`, `json`, `category` and `true_depth`.
 * `schema`: the JSON schema for JSON output
