@@ -33,6 +33,7 @@ Our multi-dimensional assessment approach enables precise identification of spec
 
 
 The performance of 12 representative SOTA LLMs with leading capabilities on our **DeepJSONEval** benchmark is presented.
+![leaderboard](Imags/leaderboard.png)
 
 ## Dataset Generation
 ### Tree Based Pseudo-Schema Candidates Generation
@@ -58,8 +59,7 @@ This criterion evaluates LLMs’ ability to generate syntactically
 valid JSON outputs through sequential validation
 of parsing and schema conformance,
 * **Criterion 2: Detailed Content Score**
-This criterion performs comprehensive property-wise comparison with uniform weighting across all hierarchical levels, computing weighted differences through systematic
-structural traversal
+This criterion performs comprehensive property-wise comparison with uniform weighting across all hierarchical levels based on Jaccard similarity, computing weighted differences through systematic structural traversal structural traversal.
 * **Criterion 3: Strictly Score**  
 This criterion implements binary exact-match evaluation through strict equality verification between LLM output and ground truth JSON
 
