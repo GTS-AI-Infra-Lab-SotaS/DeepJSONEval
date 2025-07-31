@@ -62,7 +62,7 @@ of parsing and schema conformance,
 This criterion performs comprehensive property-wise comparison with uniform weighting across all hierarchical levels based on Jaccard similarity, computing weighted differences through systematic structural traversal structural traversal.
 * **Criterion 3: Strictly Score**  
 This criterion implements binary exact-match evaluation through strict equality verification between LLM output and ground truth JSON
-
+![evaluation criteria](Imags/evaluation_criteira.png)
 ## Inference and Evaluation
 ### Environment
 Before using the benchmark for Model inference and evaluation, make sure all the package in the `requirements.txt` are installed. Or you can install the packages by
