@@ -83,7 +83,7 @@ The benchmark dataset has 5 columns: `schema`, `text`, `json`, `category` and `t
 ### Running Inference
 We use API in OpenRouter website to run the infernece: 
 ```python
-python running_infenrence.py --base-url 'url' --key 'api-key' --model-name 'model_name' --saving-path 'whre to save the inference result'
+python running_inference.py --base-url 'url' --key 'api-key' --model-name 'model_name' --saving-path 'whre to save the inference result'
 ```
 * `--base-url`: base url of LLM chat api
 * `--key`: api key for using the LLM chat api
@@ -94,7 +94,7 @@ If do not use the API in OpenRouter website, users can create your own method of
 ### Continue Running Inference 
 The online LLM API could be unstale as running out of credits or request congestion, some result in the inference result will be marked as **"Need Retry"**. Use `running_infenrence_continue.py` to post requests on those data pieces need retry.
 ```python
-python running_infenrence_continue.py --base-url 'url' --key 'api-key' --model-name 'model_name' --saving-path 'whre to save the inference result'
+python running_inference_continue.py --base-url 'url' --key 'api-key' --model-name 'model_name' --saving-path 'whre to save the inference result'
 ```
 ### Running Evaluation
 ```python
