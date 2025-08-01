@@ -98,7 +98,7 @@ python running_inference_continue.py --base-url 'url' --key 'api-key' --model-na
 ```
 ### Running Evaluation
 ```python
-python running_evaluation.py --load-path 'whre to save the inference result'  --saving-path 'where to save the evaluation result'
+python running_evaluation.py --load-path 'where to save the inference result'  --saving-path 'where to save the evaluation result'
 ```
 * `--load-path`: the path of folder in which the inference result file locates
 * `--saving-path`: the path of folder in which place the evaluation result file
